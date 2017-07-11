@@ -92,7 +92,7 @@ namespace Logic
         private static void CheckJaggedArray(int[][] array)
         {
             if (ReferenceEquals(array, null)) throw new ArgumentNullException($"{nameof(array)} is null.");
-            for (int i = 0; i < array.Length - 1; i++)
+            for (int i = 0; i < array.Length; i++)
             {
                 if (ReferenceEquals(array[i], null)) throw new ArgumentNullException($"One of elements in {nameof(array)} is null.");
             }
