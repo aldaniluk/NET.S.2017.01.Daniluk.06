@@ -40,6 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BubbleSortAscElemSum.cs" />
+    <Compile Include="BubbleSortAscMaxElem.cs" />
+    <Compile Include="BubbleSortAscMinElem.cs" />
+    <Compile Include="BubbleSortDescElemSum.cs" />
+    <Compile Include="BubbleSortDescMaxElem.cs" />
+    <Compile Include="BubbleSortDescMinElem.cs" />
+    <Compile Include="IComparer.cs" />
     <Compile Include="JaggedArrayExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
