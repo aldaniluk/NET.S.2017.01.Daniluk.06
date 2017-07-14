@@ -13,6 +13,7 @@ namespace Logic
         public static void BubbleSorting(int[][] array, IComparer icomparer)
         {
             CheckJaggedArray(array);
+
             for (int i = 0; i < array.Length - 1; i++)
             {
                 for (int j = 0; j < array.Length - i - 1; j++)
@@ -35,10 +36,7 @@ namespace Logic
         private static void CheckJaggedArray(int[][] array)
         {
             if (ReferenceEquals(array, null)) throw new ArgumentNullException($"{nameof(array)} is null.");
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (ReferenceEquals(array[i], null)) throw new ArgumentNullException($"One of elements in {nameof(array)} is null.");
-            }
+            if (array.Length == 0) throw new ArgumentException($"{nameof(array)} is empty.");
         }
 
         #region solution with delegate

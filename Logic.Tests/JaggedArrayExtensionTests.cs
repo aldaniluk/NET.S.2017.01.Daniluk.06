@@ -66,5 +66,29 @@ namespace Logic.Tests
             JaggedArrayExtension.BubbleSorting(arr, icomparer);
             Assert.AreEqual(arr, expected);
         }
+
+        [Test]
+        public void BubbleSortDescMinElem_NullJaggedArray_ThrowArgumentNullException()
+        {
+            IComparer icomparer = new BubbleSortDescMinElem();
+            int[][] arr = null;
+            Assert.Throws<ArgumentNullException>(() => JaggedArrayExtension.BubbleSorting(arr, icomparer));
+        }
+
+        [Test]
+        public void BubbleSortDescMinElem_EmptyJaggedArray_ThrowArgumentNullException()
+        {
+            IComparer icomparer = new BubbleSortDescMinElem();
+            int[][] arr = new int[][] { };
+            Assert.Throws<ArgumentException>(() => JaggedArrayExtension.BubbleSorting(arr, icomparer));
+        }
+
+        [Test]
+        public void BubbleSortDescMinElem_NullElementsInJaggedArray_ThrowArgumentNullException()
+        {
+            IComparer icomparer = new BubbleSortDescMinElem();
+            int[][] arr = { new int[] { 13, 4 }, new int[] { 2, 14 }, null };
+            Assert.Throws<ArgumentNullException>(() => JaggedArrayExtension.BubbleSorting(arr, icomparer));
+        }
     }
 }

@@ -14,6 +14,12 @@ namespace Logic
         /// <param name="lhs">One row of matrix.</param>
         /// <param name="rhs">Another row of matrix.</param>
         /// <returns>Negative number, if sum of the next row is greater, positive number if less, and 0 if sums are equal.</returns>
-        public int Compare(int[] lhs, int[] rhs) => lhs.Sum() - rhs.Sum();
+        public int Compare(int[] lhs, int[] rhs)
+        {
+            if (ReferenceEquals(lhs, null)) throw new ArgumentNullException($"{nameof(lhs)} is null.");
+            if (ReferenceEquals(rhs, null)) throw new ArgumentNullException($"{nameof(rhs)} is null.");
+
+            return lhs.Sum() - rhs.Sum();
+        }
     }
 }
