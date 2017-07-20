@@ -46,8 +46,11 @@
     <Compile Include="BubbleSortDescElemSum.cs" />
     <Compile Include="BubbleSortDescMaxElem.cs" />
     <Compile Include="BubbleSortDescMinElem.cs" />
+    <Compile Include="JaggedArrayExtension - different solutions\DelegateHelper.cs" />
     <Compile Include="IComparer.cs" />
+    <Compile Include="JaggedArrayExtension - different solutions\SolutionWithDelegate.cs" />
     <Compile Include="JaggedArrayExtension.cs" />
+    <Compile Include="JaggedArrayExtension - different solutions\SolutionWithInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
